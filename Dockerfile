@@ -7,7 +7,7 @@ ENV PYTHONUNBUFFERED=1
 ENV POETRY_VERSION=1.7.1
 
 # Install Poetry
-RUN pip install "poetry==$POETRY_VERSION"
+RUN pip install poetry
 
 # Set the working directory in the builder stage
 WORKDIR /app
