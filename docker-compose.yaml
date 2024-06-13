@@ -15,11 +15,11 @@ services:
       - "redis_data:/app/data"
     environment:
       LOG_LEVEL: debug
-      JACKETT_URL: "http://jackett:9117"
-      JACKETT_API_KEY: "<Set this value from Jackett>"
+      JACKETT_URL: "https://mik25-jackett.elfhosted.com"
+      JACKETT_API_KEY: "5xh2exon8sa9upaadr8s69jxywtko9s8"
       JACKETT_MAX_RESULTS: "100" # max results from jackett search
       JACKETT_TIMEOUT: "60" # max time spent searching per indexer.
-      JACKETT_INDEXERS: "yts,eztv,kickasstorrents-ws,thepiratebay,therarbg,torrentgalaxy,bitsearch,limetorrents,badasstorrents"
+      JACKETT_INDEXERS: "btsow,fearnopeer,hdforever,knaben,laidbackmanor,milkie,ncore,onlyencodes-api,privatehd,scenehd,scenetime,skipthecommercials-api,skipthetrailers,solidtorrents,torlock,torrentdownloads,torrenting,totheglorycookie"
       LISTEN_PORT: "8000"
 
   jackett:
