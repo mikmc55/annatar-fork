@@ -17,7 +17,7 @@ COPY pyproject.toml poetry.lock* /app/
 
 # Install runtime dependencies using Poetry and create wheels for them
 RUN poetry config virtualenvs.create false
-RUN poetry install --only-main --no-root --no-interaction --no-ansi
+RUN poetry install --only main --no-root --no-interaction --no-ansi
 RUN poetry export -f requirements.txt --output requirements.txt --without-hashes
 RUN pip wheel --no-cache-dir --no-deps --wheel-dir /tmp/wheels -r requirements.txt
 
