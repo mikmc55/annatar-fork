@@ -1,0 +1,7 @@
+version: 1
+services:
+  - type: web
+    name: annatar
+    env: production
+    buildCommand: ""
+    startCommand: "docker run -p 8000:8000 mikmc/annatar:latest"
