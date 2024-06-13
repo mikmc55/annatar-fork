@@ -16,10 +16,10 @@ WORKDIR /app
 COPY pyproject.toml poetry.lock* /app/
 
 # Install runtime dependencies using Poetry and create wheels for them
-RUN poetry config virtualenvs.create false \
-    && poetry install --no-dev --no-root --no-interaction --no-ansi \
-    && poetry export -f requirements.txt --output requirements.txt --without-hashes \
-    && pip wheel --no-cache-dir --no-deps --wheel-dir /tmp/wheels -r requirements.txt
+RUN poetry config virtualenvs.create false 
+RUN poetry install --no-dev --no-root --no-interaction --no-ansi
+RUN poetry export -f requirements.txt --output requirements.txt --without-hashes
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /tmp/wheels -r requirements.txt
 
 # Copy the rest of your application's code
 COPY annatar /app/annatar
